@@ -22,19 +22,17 @@ const totalSlides = slideImages.length;
 
 let currentIndex = 0;
 
-// Function to move to the next slide
+
 function nextSlide() {
     currentIndex++;
     if (currentIndex >= totalSlides) {
-        currentIndex = 0; // Loop back to the first slide
+        currentIndex = 0; 
     }
     updateSlider();
 }
 
-// Function to update the slider position
+
 function updateSlider() {
     slides.style.transform = `translateX(-${currentIndex * 100}%)`;
 }
-
-// Automatically move to the next slide every 3 seconds
-setInterval(nextSlide, 3000);
+setInterval(nextSlide, 5000);
